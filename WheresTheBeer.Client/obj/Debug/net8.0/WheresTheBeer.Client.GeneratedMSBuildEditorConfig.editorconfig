@@ -26,6 +26,10 @@ build_property._RazorSourceGeneratorDebug =
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcSG9tZS5yYXpvcg==
 build_metadata.AdditionalFiles.CssScope = 
 
+[G:/Apps/WheresTheBeer/WheresTheBeer.Client/Pages/Places.razor]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcUGxhY2VzLnJhem9y
+build_metadata.AdditionalFiles.CssScope = 
+
 [G:/Apps/WheresTheBeer/WheresTheBeer.Client/Routes.razor]
 build_metadata.AdditionalFiles.TargetPath = Um91dGVzLnJhem9y
 build_metadata.AdditionalFiles.CssScope = 

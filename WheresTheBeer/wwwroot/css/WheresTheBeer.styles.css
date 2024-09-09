@@ -1,0 +1,107 @@
+﻿/* Base colors */
+:root {
+    --black-1: #0d0d0d;
+    --black-2: #1a1a1a;
+    --black-3: #262626;
+    --grey-1: #4d4d4d;
+    --grey-2: #808080;
+    --grey-3: #b3b3b3;
+    --grey-4: #d9d9d9;
+    --white-1: #f2f2f2;
+    --white-2: #fafafa;
+    --white-3: #ffffff;
+}
+
+/* Body */
+body {
+    background-color: var(--black-2);
+    color: var(--white-2);
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+}
+
+/* Headers */
+h1, h2, h3, h4, h5, h6 {
+    color: var(--white-3);
+    border-bottom: 1px solid var(--grey-2);
+    padding-bottom: 5px;
+    text-align: center;
+}
+
+/* Input fields */
+input[type="text"] {
+    background-color: var(--grey-4);
+    color: var(--black-1);
+    border: 1px solid var(--grey-2);
+    padding: 10px;
+    margin: 10px 0;
+    width: 100%;
+    box-sizing: border-box;
+    border-radius: 5px;
+}
+
+    input[type="text"]::placeholder {
+        color: var(--grey-3);
+    }
+
+/* Buttons */
+button {
+    background-color: var(--grey-1);
+    color: var(--white-3);
+    margin: 10;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    width: 100%;
+}
+
+    button:hover {
+        background-color: var(--grey-2);
+    }
+
+/* List of places */
+ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+    ul li {
+        background-color: var(--black-3);
+        padding: 15px;
+        margin: 10px 0;
+        border: 1px solid var(--grey-1);
+        border-radius: 5px;
+        transition: background-color 0.3s;
+    }
+
+        ul li:hover {
+            background-color: var(--black-1);
+        }
+
+/* Links */
+a {
+    color: var(--white-3);
+    text-decoration: none;
+    transition: color 0.3s;
+}
+
+    a:hover {
+        color: var(--grey-3);
+    }
+
+/* Containers */
+.container {
+    background-color: var(--black-2);
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0px 0px 10px var(--black-1);
+    max-width: 600px; /* Narrower width */
+    width: 100%; /* Full width for smaller screens */
+    margin: 0 auto;
+}

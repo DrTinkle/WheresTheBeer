@@ -1,0 +1,109 @@
+﻿@page "/places"
+@using WheresTheBeer.Shared.Models
+@inject HttpClient Http
+@inject IJSRuntime JSRuntime
+
+<div class="container">
+    <h3 class="header">Nearby Places</h3>
+
+    <!-- Input fields for manual location -->
+    <input class="input" type="text" placeholder="@manualCoordinatesPlaceholder" @bind="manualCoordinates" />
+    <input class="input" type="text" placeholder="Enter a city or place name" @bind="keyword" />
+    <button class="button" @onclick="GetPlacesWithManualLocation">Get Places</button>
+
+    @if (places != null)
+    {
+        <ul class="place-list">
+            @foreach (var place in places)
+            {
+                <li class="place-item">
+                    <h4>@place.Name</h4>
+                    <p>Rating: @place.Rating (@place.UserRatingsTotal reviews)</p>
+                    <p>Address: @place.Vicinity</p>
+                    <p>Open Now: @(place.OpeningHours?.OpenNow == true ? "Yes" : "No")</p>
+                </li>
+            }
+        </ul>
+    }
+    else
+    {
+        <p class="message">@message</p>
+    }
+</div>
+
+@code {
+    private List<GooglePlace> places;
+    private string message = "Waiting for server...";
+    private string manualCoordinates = string.Empty;
+    private string keyword = string.Empty;
+    private string manualCoordinatesPlaceholder = "Fetching your location...";
+
+    protected override async Task OnInitializedAsync()
+    {
+        await GetGeolocationAsync();  // Get user's geolocation on component initialization
+    }
+
+    private async Task GetGeolocationAsync()
+    {
+        try
+        {
+            var position = await JSRuntime.InvokeAsync<Geolocation>("getGeolocation");
+            var latitude = position.Latitude;
+            var longitude = position.Longitude;
+
+            manualCoordinatesPlaceholder = $"{latitude},{longitude}";  // Set the geolocation as placeholder
+            manualCoordinates = $"{latitude},{longitude}";  // Set the coordinates as initial value
+        }
+        catch (Exception ex)
+        {
+            message = $"Error getting location: {ex.Message}";
+        }
+    }
+
+    private async Task GetPlacesWithManualLocation()
+    {
+        // Determine if the user provided coordinates or a keyword
+        string apiUrl;
+
+        if (!string.IsNullOrEmpty(manualCoordinates))
+        {
+            // Use coordinates for the API call
+            apiUrl = $"api/googleplaces/nearby?location={manualCoordinates}&radius=1000";
+        }
+        else if (!string.IsNullOrEmpty(keyword))
+        {
+            // Use keyword (Text Search) for the API call
+            apiUrl = $"api/googleplaces/textsearch?query={keyword}";
+        }
+        else
+        {
+            message = "Please provide coordinates or a keyword.";
+            return;
+        }
+
+        try
+        {
+            var response = await Http.GetFromJsonAsync<List<GooglePlace>>(apiUrl);
+
+            if (response != null && response.Count > 0)
+            {
+                places = response;
+                message = string.Empty;
+            }
+            else
+            {
+                message = "No places found.";
+            }
+        }
+        catch (Exception ex)
+        {
+            message = $"Error: {ex.Message}";
+        }
+    }
+
+    public class Geolocation
+    {
+        public double Latitude { get; set; }
+        public double Longitude { get; set; }
+    }
+}

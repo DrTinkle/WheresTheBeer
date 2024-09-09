@@ -1,0 +1,9 @@
+# Ignore apiKeys.json to prevent committing sensitive API keys
+WheresTheBeer/apiKeys.json
+
+# Ignore other system or temporary files (optional)
+*.log
+bin/
+obj/
+.vs/
+.vscode/
