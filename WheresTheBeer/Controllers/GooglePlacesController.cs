@@ -23,7 +23,11 @@ namespace WheresTheBeer.Controllers
         [HttpGet("nearby")]
         public async Task<IActionResult> GetNearbyPlaces([FromQuery] string location, [FromQuery] int radius = 200)
         {
-            var googlePlacesUrl = $"https://maps.googleapis.com/maps/api/place/nearbysearch/json?location={location}&radius={radius}&type=bar&key={_apiKey}";
+            var googlePlacesUrl = $"https://maps.googleapis.com/maps/api/place/nearbysearch/json" +
+                $"?location={location}" +
+                $"&radius={radius}" +
+                $"&type=bar" +
+                $"&key={_apiKey}";
 
             var response = await _httpClient.GetAsync(googlePlacesUrl);
             if (!response.IsSuccessStatusCode)
@@ -33,7 +37,6 @@ namespace WheresTheBeer.Controllers
 
             var content = await response.Content.ReadAsStringAsync();
 
-            // Deserialize the JSON response
             var placesResponse = JsonSerializer.Deserialize<GooglePlacesResponse>(content, new JsonSerializerOptions { PropertyNameCaseInsensitive = true });
 
             if (placesResponse?.Results == null)

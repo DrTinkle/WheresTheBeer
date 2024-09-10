@@ -32,6 +32,7 @@
 </div>
 
 @code {
+    @using System.Text.Json;
     private List<GooglePlace> places;
     private string message = "Waiting for server...";
     private string manualCoordinates = string.Empty;
@@ -68,7 +69,7 @@
         if (!string.IsNullOrEmpty(manualCoordinates))
         {
             // Use coordinates for the API call
-            apiUrl = $"api/googleplaces/nearby?location={manualCoordinates}&radius=1000";
+            apiUrl = $"api/googleplaces/nearby?location={manualCoordinates}&radius=200";
         }
         else if (!string.IsNullOrEmpty(keyword))
         {
@@ -89,6 +90,9 @@
             {
                 places = response;
                 message = string.Empty;
+                var firstPlace = response.FirstOrDefault();
+                var rawJson = System.Text.Json.JsonSerializer.Serialize(firstPlace, new JsonSerializerOptions { WriteIndented = true });
+                Console.WriteLine($"First Entry of Raw JSON Response: {rawJson}");
             }
             else
             {

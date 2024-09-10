@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "Uy6JKrYtJpg=",
+  "dgSpecHash": "8HGkwh1DSDc=",
   "success": true,
-  "projectFilePath": "G:\\Apps\\WheresTheBeer\\WheresTheBeer.Client\\WheresTheBeer.Client.csproj",
+  "projectFilePath": "C:\\Users\\royko\\Source\\Repos\\WheresTheBeer\\WheresTheBeer.Client\\WheresTheBeer.Client.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\royko\\.nuget\\packages\\microsoft.aspnetcore.authorization\\8.0.8\\microsoft.aspnetcore.authorization.8.0.8.nupkg.sha512",
     "C:\\Users\\royko\\.nuget\\packages\\microsoft.aspnetcore.components\\8.0.8\\microsoft.aspnetcore.components.8.0.8.nupkg.sha512",

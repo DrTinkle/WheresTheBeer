@@ -1,20 +1,24 @@
 {
   "format": 1,
   "restore": {
-    "G:\\Apps\\WheresTheBeer\\WheresTheBeer\\WheresTheBeer.csproj": {}
+    "C:\\Users\\royko\\Source\\Repos\\WheresTheBeer\\WheresTheBeer\\WheresTheBeer.csproj": {}
   },
   "projects": {
-    "G:\\Apps\\WheresTheBeer\\WheresTheBeer.Client\\WheresTheBeer.Client.csproj": {
+    "C:\\Users\\royko\\Source\\Repos\\WheresTheBeer\\WheresTheBeer.Client\\WheresTheBeer.Client.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "G:\\Apps\\WheresTheBeer\\WheresTheBeer.Client\\WheresTheBeer.Client.csproj",
+        "projectUniqueName": "C:\\Users\\royko\\Source\\Repos\\WheresTheBeer\\WheresTheBeer.Client\\WheresTheBeer.Client.csproj",
         "projectName": "WheresTheBeer.Client",
-        "projectPath": "G:\\Apps\\WheresTheBeer\\WheresTheBeer.Client\\WheresTheBeer.Client.csproj",
+        "projectPath": "C:\\Users\\royko\\Source\\Repos\\WheresTheBeer\\WheresTheBeer.Client\\WheresTheBeer.Client.csproj",
         "packagesPath": "C:\\Users\\royko\\.nuget\\packages\\",
-        "outputPath": "G:\\Apps\\WheresTheBeer\\WheresTheBeer.Client\\obj\\",
+        "outputPath": "C:\\Users\\royko\\Source\\Repos\\WheresTheBeer\\WheresTheBeer.Client\\obj\\",
         "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
+        ],
         "configFilePaths": [
           "C:\\Users\\royko\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -22,14 +26,15 @@
         ],
         "sources": {
           "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "C:\\Program Files\\dotnet\\library-packs": {},
           "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {
           "net8.0": {
             "targetAlias": "net8.0",
             "projectReferences": {
-              "G:\\Apps\\WheresTheBeer\\WheresTheBeer.Shared\\WheresTheBeer.Shared.csproj": {
-                "projectPath": "G:\\Apps\\WheresTheBeer\\WheresTheBeer.Shared\\WheresTheBeer.Shared.csproj"
+              "C:\\Users\\royko\\Source\\Repos\\WheresTheBeer\\WheresTheBeer.Shared\\WheresTheBeer.Shared.csproj": {
+                "projectPath": "C:\\Users\\royko\\Source\\Repos\\WheresTheBeer\\WheresTheBeer.Shared\\WheresTheBeer.Shared.csproj"
               }
             }
           }
@@ -97,17 +102,21 @@
         }
       }
     },
-    "G:\\Apps\\WheresTheBeer\\WheresTheBeer.Shared\\WheresTheBeer.Shared.csproj": {
+    "C:\\Users\\royko\\Source\\Repos\\WheresTheBeer\\WheresTheBeer.Shared\\WheresTheBeer.Shared.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "G:\\Apps\\WheresTheBeer\\WheresTheBeer.Shared\\WheresTheBeer.Shared.csproj",
+        "projectUniqueName": "C:\\Users\\royko\\Source\\Repos\\WheresTheBeer\\WheresTheBeer.Shared\\WheresTheBeer.Shared.csproj",
         "projectName": "WheresTheBeer.Shared",
-        "projectPath": "G:\\Apps\\WheresTheBeer\\WheresTheBeer.Shared\\WheresTheBeer.Shared.csproj",
+        "projectPath": "C:\\Users\\royko\\Source\\Repos\\WheresTheBeer\\WheresTheBeer.Shared\\WheresTheBeer.Shared.csproj",
         "packagesPath": "C:\\Users\\royko\\.nuget\\packages\\",
-        "outputPath": "G:\\Apps\\WheresTheBeer\\WheresTheBeer.Shared\\obj\\",
+        "outputPath": "C:\\Users\\royko\\Source\\Repos\\WheresTheBeer\\WheresTheBeer.Shared\\obj\\",
         "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
+        ],
         "configFilePaths": [
           "C:\\Users\\royko\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -115,6 +124,7 @@
         ],
         "sources": {
           "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "C:\\Program Files\\dotnet\\library-packs": {},
           "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {
@@ -157,17 +167,21 @@
         }
       }
     },
-    "G:\\Apps\\WheresTheBeer\\WheresTheBeer\\WheresTheBeer.csproj": {
+    "C:\\Users\\royko\\Source\\Repos\\WheresTheBeer\\WheresTheBeer\\WheresTheBeer.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "G:\\Apps\\WheresTheBeer\\WheresTheBeer\\WheresTheBeer.csproj",
+        "projectUniqueName": "C:\\Users\\royko\\Source\\Repos\\WheresTheBeer\\WheresTheBeer\\WheresTheBeer.csproj",
         "projectName": "WheresTheBeer",
-        "projectPath": "G:\\Apps\\WheresTheBeer\\WheresTheBeer\\WheresTheBeer.csproj",
+        "projectPath": "C:\\Users\\royko\\Source\\Repos\\WheresTheBeer\\WheresTheBeer\\WheresTheBeer.csproj",
         "packagesPath": "C:\\Users\\royko\\.nuget\\packages\\",
-        "outputPath": "G:\\Apps\\WheresTheBeer\\WheresTheBeer\\obj\\",
+        "outputPath": "C:\\Users\\royko\\Source\\Repos\\WheresTheBeer\\WheresTheBeer\\obj\\",
         "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
+        ],
         "configFilePaths": [
           "C:\\Users\\royko\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -175,17 +189,18 @@
         ],
         "sources": {
           "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "C:\\Program Files\\dotnet\\library-packs": {},
           "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {
           "net8.0": {
             "targetAlias": "net8.0",
             "projectReferences": {
-              "G:\\Apps\\WheresTheBeer\\WheresTheBeer.Client\\WheresTheBeer.Client.csproj": {
-                "projectPath": "G:\\Apps\\WheresTheBeer\\WheresTheBeer.Client\\WheresTheBeer.Client.csproj"
+              "C:\\Users\\royko\\Source\\Repos\\WheresTheBeer\\WheresTheBeer.Client\\WheresTheBeer.Client.csproj": {
+                "projectPath": "C:\\Users\\royko\\Source\\Repos\\WheresTheBeer\\WheresTheBeer.Client\\WheresTheBeer.Client.csproj"
               },
-              "G:\\Apps\\WheresTheBeer\\WheresTheBeer.Shared\\WheresTheBeer.Shared.csproj": {
-                "projectPath": "G:\\Apps\\WheresTheBeer\\WheresTheBeer.Shared\\WheresTheBeer.Shared.csproj"
+              "C:\\Users\\royko\\Source\\Repos\\WheresTheBeer\\WheresTheBeer.Shared\\WheresTheBeer.Shared.csproj": {
+                "projectPath": "C:\\Users\\royko\\Source\\Repos\\WheresTheBeer\\WheresTheBeer.Shared\\WheresTheBeer.Shared.csproj"
               }
             }
           }
