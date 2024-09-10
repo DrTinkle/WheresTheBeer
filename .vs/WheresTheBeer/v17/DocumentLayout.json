@@ -3,6 +3,10 @@
   "WorkspaceRootPath": "C:\\Users\\royko\\source\\repos\\WheresTheBeer\\",
   "Documents": [
     {
+      "AbsoluteMoniker": "D:0:0:{39F33500-F6DE-4D09-8887-ADFBB742732B}|WheresTheBeer\\WheresTheBeer.csproj|c:\\users\\royko\\source\\repos\\wheresthebeer\\wheresthebeer\\wheresthebeer.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|",
+      "RelativeMoniker": "D:0:0:{39F33500-F6DE-4D09-8887-ADFBB742732B}|WheresTheBeer\\WheresTheBeer.csproj|solutionrelative:wheresthebeer\\wheresthebeer.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|"
+    },
+    {
       "AbsoluteMoniker": "D:0:0:{39F33500-F6DE-4D09-8887-ADFBB742732B}|WheresTheBeer\\WheresTheBeer.csproj|c:\\users\\royko\\source\\repos\\wheresthebeer\\wheresthebeer\\wwwroot\\css\\wheresthebeer.styles.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}",
       "RelativeMoniker": "D:0:0:{39F33500-F6DE-4D09-8887-ADFBB742732B}|WheresTheBeer\\WheresTheBeer.csproj|solutionrelative:wheresthebeer\\wwwroot\\css\\wheresthebeer.styles.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}"
     },
@@ -17,10 +21,6 @@
     {
       "AbsoluteMoniker": "D:0:0:{F9FF9B0A-3E7A-4DEA-BC27-0327808D464D}|WheresTheBeer.Shared\\WheresTheBeer.Shared.csproj|c:\\users\\royko\\source\\repos\\wheresthebeer\\wheresthebeer.shared\\class1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{F9FF9B0A-3E7A-4DEA-BC27-0327808D464D}|WheresTheBeer.Shared\\WheresTheBeer.Shared.csproj|solutionrelative:wheresthebeer.shared\\class1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{39F33500-F6DE-4D09-8887-ADFBB742732B}|WheresTheBeer\\WheresTheBeer.csproj|c:\\users\\royko\\source\\repos\\wheresthebeer\\wheresthebeer\\wheresthebeer.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|",
-      "RelativeMoniker": "D:0:0:{39F33500-F6DE-4D09-8887-ADFBB742732B}|WheresTheBeer\\WheresTheBeer.csproj|solutionrelative:wheresthebeer\\wheresthebeer.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|"
     },
     {
       "AbsoluteMoniker": "D:0:0:{0F18A760-9AD6-456C-B6ED-314D40589FB6}|WheresTheBeer.Client\\WheresTheBeer.Client.csproj|c:\\users\\royko\\source\\repos\\wheresthebeer\\wheresthebeer.client\\wheresthebeer.client.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|",
@@ -77,11 +77,15 @@
       "DocumentGroups": [
         {
           "DockedWidth": 755,
-          "SelectedChildIndex": 9,
+          "SelectedChildIndex": 7,
           "Children": [
             {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{cce594b6-0c39-4442-ba28-10c64ac7e89f}"
+            },
+            {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 2,
               "Title": "Places.razor",
               "DocumentMoniker": "C:\\Users\\royko\\source\\repos\\WheresTheBeer\\WheresTheBeer.Client\\Pages\\Places.razor",
               "RelativeDocumentMoniker": "WheresTheBeer.Client\\Pages\\Places.razor",
@@ -107,7 +111,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 3,
+              "DocumentIndex": 4,
               "Title": "Class1.cs",
               "DocumentMoniker": "C:\\Users\\royko\\source\\repos\\WheresTheBeer\\WheresTheBeer.Shared\\Class1.cs",
               "RelativeDocumentMoniker": "WheresTheBeer.Shared\\Class1.cs",
@@ -156,7 +160,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 4,
+              "DocumentIndex": 0,
               "Title": "WheresTheBeer.csproj",
               "DocumentMoniker": "C:\\Users\\royko\\Source\\Repos\\WheresTheBeer\\WheresTheBeer\\WheresTheBeer.csproj",
               "RelativeDocumentMoniker": "WheresTheBeer\\WheresTheBeer.csproj",
@@ -194,7 +198,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 0,
+              "DocumentIndex": 1,
               "Title": "WheresTheBeer.styles.css",
               "DocumentMoniker": "C:\\Users\\royko\\source\\repos\\WheresTheBeer\\WheresTheBeer\\wwwroot\\css\\WheresTheBeer.styles.css",
               "RelativeDocumentMoniker": "WheresTheBeer\\wwwroot\\css\\WheresTheBeer.styles.css",
@@ -207,7 +211,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 3,
               "Title": "GooglePlacesController.cs",
               "DocumentMoniker": "C:\\Users\\royko\\source\\repos\\WheresTheBeer\\WheresTheBeer\\Controllers\\GooglePlacesController.cs",
               "RelativeDocumentMoniker": "WheresTheBeer\\Controllers\\GooglePlacesController.cs",
@@ -217,10 +221,6 @@
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-09-09T19:32:48.218Z",
               "EditorCaption": ""
-            },
-            {
-              "$type": "Bookmark",
-              "Name": "ST:0:0:{cce594b6-0c39-4442-ba28-10c64ac7e89f}"
             },
             {
               "$type": "Document",
