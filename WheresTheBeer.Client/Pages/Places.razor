@@ -4,11 +4,19 @@
 @inject IJSRuntime JSRuntime
 
 <div class="container">
-    <h3 class="header">Nearby Places</h3>
+    <h3 class="header">Nearby Places (That Serve Beer!)</h3>
 
-    <!-- Input fields for manual location -->
-    <input class="input" type="text" placeholder="@manualCoordinatesPlaceholder" @bind="manualCoordinates" />
-    <input class="input" type="text" placeholder="Enter a city or place name" @bind="keyword" />
+    <!-- Input fields for manual location and range slider -->
+    <div class="input-group">
+        <input class="input" type="text" placeholder="@manualCoordinatesPlaceholder" @bind="manualCoordinates" />
+        <input class="input" type="text" placeholder="Enter your location (city or place name)" @bind="keyword" />
+    </div>
+
+    <div class="slider-group">
+        <label for="range">Search Radius: @range meters</label>
+        <input type="range" id="range" min="100" max="2000" step="100" @bind="range" />
+    </div>
+
     <button class="button" @onclick="GetPlacesWithManualLocation">Get Places</button>
 
     @if (places != null)
@@ -16,11 +24,49 @@
         <ul class="place-list">
             @foreach (var place in places)
             {
-                <li class="place-item">
-                    <h4>@place.Name</h4>
-                    <p>Rating: @place.Rating (@place.UserRatingsTotal reviews)</p>
-                    <p>Address: @place.Vicinity</p>
-                    <p>Open Now: @(place.OpeningHours?.OpenNow == true ? "Yes" : "No")</p>
+                <li class="place-item card">
+                    <a href="https://www.google.com/maps?q=@place.Vicinity" target="_blank">
+                        <div class="place-header">
+                            <!-- Place Icon -->
+                            <img src="@place.Icon" alt="@place.Name" width="50" height="50" class="place-icon" />
+
+                            <!-- Place Name and Open Status -->
+                            <div class="place-info">
+                                <h4 class="place-name">@place.Name</h4>
+                                <p class="place-open-status">
+                                    Open Now: @(place.OpeningHours?.OpenNow == true ? "Yes" : "No")
+                                </p>
+                            </div>
+                        </div>
+
+                        <!-- Rating and Reviews -->
+                        <div class="place-rating">
+                            <span class="rating">Rating: @place.Rating</span>
+                            <span class="reviews">(@place.UserRatingsTotal reviews)</span>
+                        </div>
+
+                        @if (place.PriceLevel != null)
+                        {
+                            <div class="place-price-level">
+                                <span class="price-level">
+                                    Price Level:
+                                    @for (int i = 0; i < place.PriceLevel; i++)
+                                    {
+                                        <span>💰</span>
+                                    }
+                                </span>
+                            </div>
+                        }
+
+                        <!-- Address -->
+                        <p class="place-address">Address: @place.Vicinity</p>
+
+                        <!-- Display First Photo if available -->
+                        @if (place.PhotoUrl != null)
+                        {
+                            <img src="@place.PhotoUrl" alt="Place Photo" class="place-photo" />
+                        }
+                    </a>
                 </li>
             }
         </ul>
@@ -32,12 +78,12 @@
 </div>
 
 @code {
-    @using System.Text.Json;
     private List<GooglePlace> places;
     private string message = "Waiting for server...";
     private string manualCoordinates = string.Empty;
     private string keyword = string.Empty;
     private string manualCoordinatesPlaceholder = "Fetching your location...";
+    private int range = 500;  // Default search range (meters)
 
     protected override async Task OnInitializedAsync()
     {
@@ -63,18 +109,18 @@
 
     private async Task GetPlacesWithManualLocation()
     {
-        // Determine if the user provided coordinates or a keyword
         string apiUrl;
 
-        if (!string.IsNullOrEmpty(manualCoordinates))
+        // Prioritize keyword search if the keyword field is populated
+        if (!string.IsNullOrEmpty(keyword))
+        {
+            // Use keyword for the API call (Text Search)
+            apiUrl = $"api/googleplaces/keywordsearch?keyword={keyword}&radius={range}";
+        }
+        else if (!string.IsNullOrEmpty(manualCoordinates))
         {
             // Use coordinates for the API call
-            apiUrl = $"api/googleplaces/nearby?location={manualCoordinates}&radius=200";
-        }
-        else if (!string.IsNullOrEmpty(keyword))
-        {
-            // Use keyword (Text Search) for the API call
-            apiUrl = $"api/googleplaces/textsearch?query={keyword}";
+            apiUrl = $"api/googleplaces/nearby?location={manualCoordinates}&radius={range}";
         }
         else
         {
@@ -90,9 +136,15 @@
             {
                 places = response;
                 message = string.Empty;
-                var firstPlace = response.FirstOrDefault();
-                var rawJson = System.Text.Json.JsonSerializer.Serialize(firstPlace, new JsonSerializerOptions { WriteIndented = true });
-                Console.WriteLine($"First Entry of Raw JSON Response: {rawJson}");
+
+                // Load photo URLs for each place asynchronously
+                foreach (var place in places)
+                {
+                    if (place.Photos?.Count > 0 && !string.IsNullOrEmpty(place.Photos[0].PhotoReference))
+                    {
+                        place.PhotoUrl = await GetPhotoUrl(place.Photos[0].PhotoReference);
+                    }
+                }
             }
             else
             {
@@ -103,6 +155,13 @@
         {
             message = $"Error: {ex.Message}";
         }
+    }
+
+    private async Task<string> GetPhotoUrl(string photoReference)
+    {
+        // Call server-side controller to get the secure photo URL
+        var photoUrl = await Http.GetStringAsync($"api/googleplaces/photo?photoReference={photoReference}");
+        return photoUrl;
     }
 
     public class Geolocation
