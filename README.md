@@ -1,5 +1,7 @@
 # WheresTheBeer
 
+Test at https://wheresthebeer.azurewebsites.net/
+
 **WheresTheBeer** is a **Blazor WebAssembly** app that helps users find nearby places that serve beer. It integrates with the **Google Places API** to provide live data on bars and restaurants. The app can be installed as a **Progressive Web App (PWA)**, allowing users to add it to their devices for offline access.
 
 ## Features
