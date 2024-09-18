@@ -32,3 +32,7 @@ As the app is still in development, there are a few steps to follow to ensure pr
 - **Google Places API**: Used to fetch live data for bars and restaurants.
 - **Progressive Web App (PWA)**: Allows the app to be installed on mobile devices and accessed offline.
 - **Service Workers**: Provide offline functionality and caching for faster load times.
+  
+## License
+
+This project is licensed under the MIT License. See the [LICENSE](./LICENSE) file for more details.
