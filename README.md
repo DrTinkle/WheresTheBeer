@@ -35,4 +35,4 @@ As the app is still in development, there are a few steps to follow to ensure pr
   
 ## License
 
-This project is licensed under the [MIT License](https://opensource.org/licenses/MIT).
+This project is licensed under the MIT License.
