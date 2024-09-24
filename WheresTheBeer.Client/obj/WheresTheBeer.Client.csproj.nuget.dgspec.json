@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "G:\\Apps\\WheresTheBeer\\WheresTheBeer.Client\\WheresTheBeer.Client.csproj": {}
+    "C:\\Projects\\WheresTheBeer\\WheresTheBeer.Client\\WheresTheBeer.Client.csproj": {}
   },
   "projects": {
-    "G:\\Apps\\WheresTheBeer\\WheresTheBeer.Client\\WheresTheBeer.Client.csproj": {
+    "C:\\Projects\\WheresTheBeer\\WheresTheBeer.Client\\WheresTheBeer.Client.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "G:\\Apps\\WheresTheBeer\\WheresTheBeer.Client\\WheresTheBeer.Client.csproj",
+        "projectUniqueName": "C:\\Projects\\WheresTheBeer\\WheresTheBeer.Client\\WheresTheBeer.Client.csproj",
         "projectName": "WheresTheBeer.Client",
-        "projectPath": "G:\\Apps\\WheresTheBeer\\WheresTheBeer.Client\\WheresTheBeer.Client.csproj",
+        "projectPath": "C:\\Projects\\WheresTheBeer\\WheresTheBeer.Client\\WheresTheBeer.Client.csproj",
         "packagesPath": "C:\\Users\\royko\\.nuget\\packages\\",
-        "outputPath": "G:\\Apps\\WheresTheBeer\\WheresTheBeer.Client\\obj\\",
+        "outputPath": "C:\\Projects\\WheresTheBeer\\WheresTheBeer.Client\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
@@ -33,8 +33,8 @@
           "net8.0": {
             "targetAlias": "net8.0",
             "projectReferences": {
-              "G:\\Apps\\WheresTheBeer\\WheresTheBeer.Shared\\WheresTheBeer.Shared.csproj": {
-                "projectPath": "G:\\Apps\\WheresTheBeer\\WheresTheBeer.Shared\\WheresTheBeer.Shared.csproj"
+              "C:\\Projects\\WheresTheBeer\\WheresTheBeer.Shared\\WheresTheBeer.Shared.csproj": {
+                "projectPath": "C:\\Projects\\WheresTheBeer\\WheresTheBeer.Shared\\WheresTheBeer.Shared.csproj"
               }
             }
           }
@@ -102,14 +102,14 @@
         }
       }
     },
-    "G:\\Apps\\WheresTheBeer\\WheresTheBeer.Shared\\WheresTheBeer.Shared.csproj": {
+    "C:\\Projects\\WheresTheBeer\\WheresTheBeer.Shared\\WheresTheBeer.Shared.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "G:\\Apps\\WheresTheBeer\\WheresTheBeer.Shared\\WheresTheBeer.Shared.csproj",
+        "projectUniqueName": "C:\\Projects\\WheresTheBeer\\WheresTheBeer.Shared\\WheresTheBeer.Shared.csproj",
         "projectName": "WheresTheBeer.Shared",
-        "projectPath": "G:\\Apps\\WheresTheBeer\\WheresTheBeer.Shared\\WheresTheBeer.Shared.csproj",
+        "projectPath": "C:\\Projects\\WheresTheBeer\\WheresTheBeer.Shared\\WheresTheBeer.Shared.csproj",
         "packagesPath": "C:\\Users\\royko\\.nuget\\packages\\",
-        "outputPath": "G:\\Apps\\WheresTheBeer\\WheresTheBeer.Shared\\obj\\",
+        "outputPath": "C:\\Projects\\WheresTheBeer\\WheresTheBeer.Shared\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
