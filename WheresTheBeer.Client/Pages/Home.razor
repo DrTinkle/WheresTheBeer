@@ -1,4 +1,5 @@
 ﻿@page "/"
+@inject IJSRuntime JSRuntime
 @inject HttpClient Http
 @inject NavigationManager NavigationManager
 
@@ -9,16 +10,20 @@
 
     <p class="message">@message</p>
 
-    <button class="button" @onclick="CallApi">Ping the Server</button>
+    <!-- PWA Install Button -->
+    <button id="installPWA" class="install-button" style="display: none;">Install</button>
 
+    <button class="button" @onclick="CallApi">Ping the Server</button>
     <button class="button" @onclick="NavigateToPlaces">Find Nearby Places</button>
 </div>
 
-
 @code {
-    protected override void OnInitialized()
+    protected override async Task OnAfterRenderAsync(bool firstRender)
     {
-        Console.WriteLine($"BaseAddress is: {Http.BaseAddress}");
+        if (firstRender)
+        {
+            await JSRuntime.InvokeVoidAsync("initializePWAInstall");
+        }
     }
 
     private string message = "Waiting for server...";
@@ -27,27 +32,22 @@
     {
         try
         {
-            // Log the BaseAddress and the full request URL
             var baseUri = Http.BaseAddress ?? new Uri("https://fallback-url.com/");
             var fullUri = new Uri(baseUri, "api/test/ping");
             Console.WriteLine($"Making request to: {fullUri}");
 
-            // Make the request
             message = await Http.GetStringAsync(fullUri);
         }
         catch (HttpRequestException httpRequestEx)
         {
             message = $"HttpRequestException: {httpRequestEx.Message}";
-            Console.WriteLine($"HttpRequestException: {httpRequestEx}");
         }
         catch (Exception ex)
         {
             message = $"Exception: {ex.Message}";
-            Console.WriteLine($"Exception: {ex}");
         }
     }
 
-    // Navigation function
     private void NavigateToPlaces()
     {
         NavigationManager.NavigateTo("/places");

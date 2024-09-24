@@ -3,16 +3,40 @@
   "WorkspaceRootPath": "G:\\Apps\\WheresTheBeer\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{0F18A760-9AD6-456C-B6ED-314D40589FB6}|WheresTheBeer.Client\\WheresTheBeer.Client.csproj|g:\\apps\\wheresthebeer\\wheresthebeer.client\\pages\\places.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{0F18A760-9AD6-456C-B6ED-314D40589FB6}|WheresTheBeer.Client\\WheresTheBeer.Client.csproj|solutionrelative:wheresthebeer.client\\pages\\places.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{39F33500-F6DE-4D09-8887-ADFBB742732B}|WheresTheBeer\\WheresTheBeer.csproj|g:\\apps\\wheresthebeer\\wheresthebeer\\controllers\\googleplacescontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{39F33500-F6DE-4D09-8887-ADFBB742732B}|WheresTheBeer\\WheresTheBeer.csproj|solutionrelative:wheresthebeer\\controllers\\googleplacescontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{0F18A760-9AD6-456C-B6ED-314D40589FB6}|WheresTheBeer.Client\\WheresTheBeer.Client.csproj|g:\\apps\\wheresthebeer\\wheresthebeer.client\\pages\\home.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{0F18A760-9AD6-456C-B6ED-314D40589FB6}|WheresTheBeer.Client\\WheresTheBeer.Client.csproj|solutionrelative:wheresthebeer.client\\pages\\home.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{39F33500-F6DE-4D09-8887-ADFBB742732B}|WheresTheBeer\\WheresTheBeer.csproj|g:\\apps\\wheresthebeer\\wheresthebeer\\wwwroot\\css\\wheresthebeer.styles.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}",
       "RelativeMoniker": "D:0:0:{39F33500-F6DE-4D09-8887-ADFBB742732B}|WheresTheBeer\\WheresTheBeer.csproj|solutionrelative:wheresthebeer\\wwwroot\\css\\wheresthebeer.styles.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{0F18A760-9AD6-456C-B6ED-314D40589FB6}|WheresTheBeer.Client\\WheresTheBeer.Client.csproj|g:\\apps\\wheresthebeer\\wheresthebeer.client\\pages\\places.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{0F18A760-9AD6-456C-B6ED-314D40589FB6}|WheresTheBeer.Client\\WheresTheBeer.Client.csproj|solutionrelative:wheresthebeer.client\\pages\\places.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{39F33500-F6DE-4D09-8887-ADFBB742732B}|WheresTheBeer\\WheresTheBeer.csproj|g:\\apps\\wheresthebeer\\wheresthebeer\\wheresthebeer.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|",
+      "RelativeMoniker": "D:0:0:{39F33500-F6DE-4D09-8887-ADFBB742732B}|WheresTheBeer\\WheresTheBeer.csproj|solutionrelative:wheresthebeer\\wheresthebeer.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{39F33500-F6DE-4D09-8887-ADFBB742732B}|WheresTheBeer\\WheresTheBeer.csproj|g:\\apps\\wheresthebeer\\wheresthebeer\\components\\app.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{39F33500-F6DE-4D09-8887-ADFBB742732B}|WheresTheBeer\\WheresTheBeer.csproj|solutionrelative:wheresthebeer\\components\\app.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{39F33500-F6DE-4D09-8887-ADFBB742732B}|WheresTheBeer\\WheresTheBeer.csproj|g:\\apps\\wheresthebeer\\wheresthebeer\\wwwroot\\js\\pwa.js||{14D17961-FE51-464D-9111-C4AF11D7D99A}",
+      "RelativeMoniker": "D:0:0:{39F33500-F6DE-4D09-8887-ADFBB742732B}|WheresTheBeer\\WheresTheBeer.csproj|solutionrelative:wheresthebeer\\wwwroot\\js\\pwa.js||{14D17961-FE51-464D-9111-C4AF11D7D99A}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{39F33500-F6DE-4D09-8887-ADFBB742732B}|WheresTheBeer\\WheresTheBeer.csproj|g:\\apps\\wheresthebeer\\wheresthebeer\\wwwroot\\service-worker.js||{14D17961-FE51-464D-9111-C4AF11D7D99A}",
+      "RelativeMoniker": "D:0:0:{39F33500-F6DE-4D09-8887-ADFBB742732B}|WheresTheBeer\\WheresTheBeer.csproj|solutionrelative:wheresthebeer\\wwwroot\\service-worker.js||{14D17961-FE51-464D-9111-C4AF11D7D99A}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{39F33500-F6DE-4D09-8887-ADFBB742732B}|WheresTheBeer\\WheresTheBeer.csproj|g:\\apps\\wheresthebeer\\wheresthebeer\\wwwroot\\manifest.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
+      "RelativeMoniker": "D:0:0:{39F33500-F6DE-4D09-8887-ADFBB742732B}|WheresTheBeer\\WheresTheBeer.csproj|solutionrelative:wheresthebeer\\wwwroot\\manifest.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{39F33500-F6DE-4D09-8887-ADFBB742732B}|WheresTheBeer\\WheresTheBeer.csproj|g:\\apps\\wheresthebeer\\wheresthebeer\\controllers\\googleplacescontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{39F33500-F6DE-4D09-8887-ADFBB742732B}|WheresTheBeer\\WheresTheBeer.csproj|solutionrelative:wheresthebeer\\controllers\\googleplacescontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{F9FF9B0A-3E7A-4DEA-BC27-0327808D464D}|WheresTheBeer.Shared\\WheresTheBeer.Shared.csproj|g:\\apps\\wheresthebeer\\wheresthebeer.shared\\models\\googleplace.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
@@ -23,20 +47,8 @@
       "RelativeMoniker": "D:0:0:{39F33500-F6DE-4D09-8887-ADFBB742732B}|WheresTheBeer\\WheresTheBeer.csproj|solutionrelative:wheresthebeer\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{0F18A760-9AD6-456C-B6ED-314D40589FB6}|WheresTheBeer.Client\\WheresTheBeer.Client.csproj|g:\\apps\\wheresthebeer\\wheresthebeer.client\\pages\\home.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{0F18A760-9AD6-456C-B6ED-314D40589FB6}|WheresTheBeer.Client\\WheresTheBeer.Client.csproj|solutionrelative:wheresthebeer.client\\pages\\home.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{39F33500-F6DE-4D09-8887-ADFBB742732B}|WheresTheBeer\\WheresTheBeer.csproj|g:\\apps\\wheresthebeer\\wheresthebeer\\components\\app.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{39F33500-F6DE-4D09-8887-ADFBB742732B}|WheresTheBeer\\WheresTheBeer.csproj|solutionrelative:wheresthebeer\\components\\app.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{39F33500-F6DE-4D09-8887-ADFBB742732B}|WheresTheBeer\\WheresTheBeer.csproj|g:\\apps\\wheresthebeer\\wheresthebeer\\apikeys.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
       "RelativeMoniker": "D:0:0:{39F33500-F6DE-4D09-8887-ADFBB742732B}|WheresTheBeer\\WheresTheBeer.csproj|solutionrelative:wheresthebeer\\apikeys.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{39F33500-F6DE-4D09-8887-ADFBB742732B}|WheresTheBeer\\WheresTheBeer.csproj|g:\\apps\\wheresthebeer\\wheresthebeer\\wheresthebeer.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|",
-      "RelativeMoniker": "D:0:0:{39F33500-F6DE-4D09-8887-ADFBB742732B}|WheresTheBeer\\WheresTheBeer.csproj|solutionrelative:wheresthebeer\\wheresthebeer.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|"
     },
     {
       "AbsoluteMoniker": "D:0:0:{39F33500-F6DE-4D09-8887-ADFBB742732B}|WheresTheBeer\\WheresTheBeer.csproj|g:\\apps\\wheresthebeer\\wheresthebeer\\wwwroot\\js\\geolocation.js||{14D17961-FE51-464D-9111-C4AF11D7D99A}",
@@ -82,24 +94,11 @@
       "DocumentGroups": [
         {
           "DockedWidth": 755,
-          "SelectedChildIndex": 7,
+          "SelectedChildIndex": 3,
           "Children": [
             {
               "$type": "Document",
-              "DocumentIndex": 3,
-              "Title": "GooglePlace.cs",
-              "DocumentMoniker": "G:\\Apps\\WheresTheBeer\\WheresTheBeer.Shared\\Models\\GooglePlace.cs",
-              "RelativeDocumentMoniker": "WheresTheBeer.Shared\\Models\\GooglePlace.cs",
-              "ToolTip": "G:\\Apps\\WheresTheBeer\\WheresTheBeer.Shared\\Models\\GooglePlace.cs",
-              "RelativeToolTip": "WheresTheBeer.Shared\\Models\\GooglePlace.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAF0AAAAFAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-09-10T19:12:56.865Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 15,
+              "DocumentIndex": 18,
               "Title": "Program.cs",
               "DocumentMoniker": "G:\\Apps\\WheresTheBeer\\WheresTheBeer\\Program.cs",
               "RelativeDocumentMoniker": "WheresTheBeer\\Program.cs",
@@ -111,7 +110,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 10,
+              "DocumentIndex": 13,
               "Title": "Program.cs",
               "DocumentMoniker": "G:\\Apps\\WheresTheBeer\\WheresTheBeer.Client\\Program.cs",
               "RelativeDocumentMoniker": "WheresTheBeer.Client\\Program.cs",
@@ -123,31 +122,33 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 8,
+              "DocumentIndex": 3,
               "Title": "WheresTheBeer.csproj",
               "DocumentMoniker": "G:\\Apps\\WheresTheBeer\\WheresTheBeer\\WheresTheBeer.csproj",
               "RelativeDocumentMoniker": "WheresTheBeer\\WheresTheBeer.csproj",
               "ToolTip": "G:\\Apps\\WheresTheBeer\\WheresTheBeer\\WheresTheBeer.csproj",
               "RelativeToolTip": "WheresTheBeer\\WheresTheBeer.csproj",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAwAAAAOAAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA8AAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000758|",
-              "WhenOpened": "2024-09-09T18:48:40.314Z"
+              "WhenOpened": "2024-09-09T18:48:40.314Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 5,
+              "DocumentIndex": 0,
               "Title": "Home.razor",
               "DocumentMoniker": "G:\\Apps\\WheresTheBeer\\WheresTheBeer.Client\\Pages\\Home.razor",
               "RelativeDocumentMoniker": "WheresTheBeer.Client\\Pages\\Home.razor",
               "ToolTip": "G:\\Apps\\WheresTheBeer\\WheresTheBeer.Client\\Pages\\Home.razor",
               "RelativeToolTip": "WheresTheBeer.Client\\Pages\\Home.razor",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAwAAAAAAAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABAAAAAfAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2024-09-09T18:51:43.487Z"
+              "WhenOpened": "2024-09-09T18:51:43.487Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 8,
               "Title": "GooglePlacesController.cs",
               "DocumentMoniker": "G:\\Apps\\WheresTheBeer\\WheresTheBeer\\Controllers\\GooglePlacesController.cs",
               "RelativeDocumentMoniker": "WheresTheBeer\\Controllers\\GooglePlacesController.cs",
@@ -160,7 +161,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 4,
+              "DocumentIndex": 10,
               "Title": "appsettings.json",
               "DocumentMoniker": "G:\\Apps\\WheresTheBeer\\WheresTheBeer\\appsettings.json",
               "RelativeDocumentMoniker": "WheresTheBeer\\appsettings.json",
@@ -168,31 +169,30 @@
               "RelativeToolTip": "WheresTheBeer\\appsettings.json",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAcAAAAXAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
-              "WhenOpened": "2024-09-09T19:31:11.95Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-09-09T19:31:11.95Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 0,
+              "DocumentIndex": 2,
               "Title": "Places.razor",
               "DocumentMoniker": "G:\\Apps\\WheresTheBeer\\WheresTheBeer.Client\\Pages\\Places.razor",
               "RelativeDocumentMoniker": "WheresTheBeer.Client\\Pages\\Places.razor",
               "ToolTip": "G:\\Apps\\WheresTheBeer\\WheresTheBeer.Client\\Pages\\Places.razor",
               "RelativeToolTip": "WheresTheBeer.Client\\Pages\\Places.razor",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA8AAAA/AAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAsAAAByAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
               "WhenOpened": "2024-09-09T19:35:38.252Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 1,
               "Title": "WheresTheBeer.styles.css",
               "DocumentMoniker": "G:\\Apps\\WheresTheBeer\\WheresTheBeer\\wwwroot\\css\\WheresTheBeer.styles.css",
               "RelativeDocumentMoniker": "WheresTheBeer\\wwwroot\\css\\WheresTheBeer.styles.css",
-              "ToolTip": "G:\\Apps\\WheresTheBeer\\WheresTheBeer\\wwwroot\\css\\WheresTheBeer.styles.css*",
-              "RelativeToolTip": "WheresTheBeer\\wwwroot\\css\\WheresTheBeer.styles.css*",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAANwAAAAAAAAAAAAAAA==",
+              "ToolTip": "G:\\Apps\\WheresTheBeer\\WheresTheBeer\\wwwroot\\css\\WheresTheBeer.styles.css",
+              "RelativeToolTip": "WheresTheBeer\\wwwroot\\css\\WheresTheBeer.styles.css",
+              "ViewState": "AgIAAMIAAAAAAAAAAAAqwPEAAAATAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003000|",
               "WhenOpened": "2024-09-09T21:40:45.659Z",
               "EditorCaption": ""
@@ -200,6 +200,70 @@
             {
               "$type": "Document",
               "DocumentIndex": 7,
+              "Title": "manifest.json",
+              "DocumentMoniker": "G:\\Apps\\WheresTheBeer\\WheresTheBeer\\wwwroot\\manifest.json",
+              "RelativeDocumentMoniker": "WheresTheBeer\\wwwroot\\manifest.json",
+              "ToolTip": "G:\\Apps\\WheresTheBeer\\WheresTheBeer\\wwwroot\\manifest.json",
+              "RelativeToolTip": "WheresTheBeer\\wwwroot\\manifest.json",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABQAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
+              "WhenOpened": "2024-09-11T13:37:44.029Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "pwa.js",
+              "DocumentMoniker": "G:\\Apps\\WheresTheBeer\\WheresTheBeer\\wwwroot\\js\\pwa.js",
+              "RelativeDocumentMoniker": "WheresTheBeer\\wwwroot\\js\\pwa.js",
+              "ToolTip": "G:\\Apps\\WheresTheBeer\\WheresTheBeer\\wwwroot\\js\\pwa.js",
+              "RelativeToolTip": "WheresTheBeer\\wwwroot\\js\\pwa.js",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABgAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001646|",
+              "WhenOpened": "2024-09-11T14:21:20.66Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "App.razor",
+              "DocumentMoniker": "G:\\Apps\\WheresTheBeer\\WheresTheBeer\\Components\\App.razor",
+              "RelativeDocumentMoniker": "WheresTheBeer\\Components\\App.razor",
+              "ToolTip": "G:\\Apps\\WheresTheBeer\\WheresTheBeer\\Components\\App.razor",
+              "RelativeToolTip": "WheresTheBeer\\Components\\App.razor",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAB4AAAAlAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2024-09-09T21:02:54.112Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "service-worker.js",
+              "DocumentMoniker": "G:\\Apps\\WheresTheBeer\\WheresTheBeer\\wwwroot\\service-worker.js",
+              "RelativeDocumentMoniker": "WheresTheBeer\\wwwroot\\service-worker.js",
+              "ToolTip": "G:\\Apps\\WheresTheBeer\\WheresTheBeer\\wwwroot\\service-worker.js",
+              "RelativeToolTip": "WheresTheBeer\\wwwroot\\service-worker.js",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAsAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001646|",
+              "WhenOpened": "2024-09-11T14:02:44.882Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 9,
+              "Title": "GooglePlace.cs",
+              "DocumentMoniker": "G:\\Apps\\WheresTheBeer\\WheresTheBeer.Shared\\Models\\GooglePlace.cs",
+              "RelativeDocumentMoniker": "WheresTheBeer.Shared\\Models\\GooglePlace.cs",
+              "ToolTip": "G:\\Apps\\WheresTheBeer\\WheresTheBeer.Shared\\Models\\GooglePlace.cs",
+              "RelativeToolTip": "WheresTheBeer.Shared\\Models\\GooglePlace.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAF0AAAAFAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-09-10T19:12:56.865Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 11,
               "Title": "apiKeys.json",
               "DocumentMoniker": "G:\\Apps\\WheresTheBeer\\WheresTheBeer\\apiKeys.json",
               "RelativeDocumentMoniker": "WheresTheBeer\\apiKeys.json",
@@ -211,19 +275,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 6,
-              "Title": "App.razor",
-              "DocumentMoniker": "G:\\Apps\\WheresTheBeer\\WheresTheBeer\\Components\\App.razor",
-              "RelativeDocumentMoniker": "WheresTheBeer\\Components\\App.razor",
-              "ToolTip": "G:\\Apps\\WheresTheBeer\\WheresTheBeer\\Components\\App.razor",
-              "RelativeToolTip": "WheresTheBeer\\Components\\App.razor",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAgAAABBAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2024-09-09T21:02:54.112Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 13,
+              "DocumentIndex": 16,
               "Title": "WheresTheBeer.Client.csproj",
               "DocumentMoniker": "G:\\Apps\\WheresTheBeer\\WheresTheBeer.Client\\WheresTheBeer.Client.csproj",
               "RelativeDocumentMoniker": "WheresTheBeer.Client\\WheresTheBeer.Client.csproj",
@@ -235,7 +287,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 14,
+              "DocumentIndex": 17,
               "Title": "Class1.cs",
               "DocumentMoniker": "G:\\Apps\\WheresTheBeer\\WheresTheBeer.Shared\\Class1.cs",
               "RelativeDocumentMoniker": "WheresTheBeer.Shared\\Class1.cs",
@@ -247,7 +299,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 11,
+              "DocumentIndex": 14,
               "Title": "WheresTheBeer.Shared.csproj",
               "DocumentMoniker": "G:\\Apps\\WheresTheBeer\\WheresTheBeer.Shared\\WheresTheBeer.Shared.csproj",
               "RelativeDocumentMoniker": "WheresTheBeer.Shared\\WheresTheBeer.Shared.csproj",
@@ -259,19 +311,19 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 9,
+              "DocumentIndex": 12,
               "Title": "Geolocation.js",
               "DocumentMoniker": "G:\\Apps\\WheresTheBeer\\WheresTheBeer\\wwwroot\\js\\Geolocation.js",
               "RelativeDocumentMoniker": "WheresTheBeer\\wwwroot\\js\\Geolocation.js",
               "ToolTip": "G:\\Apps\\WheresTheBeer\\WheresTheBeer\\wwwroot\\js\\Geolocation.js",
               "RelativeToolTip": "WheresTheBeer\\wwwroot\\js\\Geolocation.js",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAqwBIAAAACAAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAAA6wBIAAAACAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001646|",
               "WhenOpened": "2024-09-09T21:14:40.4Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 12,
+              "DocumentIndex": 15,
               "Title": "_Imports.razor",
               "DocumentMoniker": "G:\\Apps\\WheresTheBeer\\WheresTheBeer\\Components\\_Imports.razor",
               "RelativeDocumentMoniker": "WheresTheBeer\\Components\\_Imports.razor",
@@ -283,7 +335,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 17,
+              "DocumentIndex": 20,
               "Title": "TestController.cs",
               "DocumentMoniker": "G:\\Apps\\WheresTheBeer\\WheresTheBeer\\Controllers\\TestController.cs",
               "RelativeDocumentMoniker": "WheresTheBeer\\Controllers\\TestController.cs",
@@ -295,7 +347,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 16,
+              "DocumentIndex": 19,
               "Title": "Routes.razor",
               "DocumentMoniker": "G:\\Apps\\WheresTheBeer\\WheresTheBeer.Client\\Routes.razor",
               "RelativeDocumentMoniker": "WheresTheBeer.Client\\Routes.razor",
