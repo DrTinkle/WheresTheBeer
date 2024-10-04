@@ -1,5 +1,4 @@
-﻿/* Base colors */
-:root {
+﻿:root {
     --black-1: #0d0d0d;
     --black-2: #1a1a1a;
     --black-3: #262626;
@@ -12,7 +11,6 @@
     --white-3: #ffffff;
 }
 
-/* Body */
 body {
     background-color: var(--black-2);
     color: var(--white-2);
@@ -23,7 +21,6 @@ body {
     margin: 0;
 }
 
-/* Headers */
 h1, h2, h3, h4, h5, h6 {
     color: var(--white-3);
     border-bottom: 1px solid var(--grey-2);
@@ -31,7 +28,6 @@ h1, h2, h3, h4, h5, h6 {
     text-align: center;
 }
 
-/* Input fields */
 input[type="text"] {
     background-color: var(--grey-4);
     color: var(--black-1);
@@ -48,7 +44,6 @@ input[type="text"] {
         color: var(--grey-3);
     }
 
-/* Buttons */
 button {
     background-color: var(--grey-1);
     color: var(--white-3);
@@ -65,7 +60,6 @@ button {
         background-color: var(--grey-2);
     }
 
-/* Slider */
 .slider-group {
     margin: 20px 0;
     text-align: center;
@@ -121,7 +115,6 @@ input[type="range"] {
         transition: background-color 0.3s;
     }
 
-/* List of places */
 ul {
     list-style-type: none;
     padding: 0;
@@ -143,7 +136,6 @@ ul {
             background-color: var(--black-1);
         }
 
-/* Place Header */
 .place-header {
     display: flex;
     align-items: center;
@@ -168,7 +160,6 @@ ul {
     color: var(--grey-3);
 }
 
-/* Rating and Address */
 .place-rating, .place-address {
     margin: 10px 0;
     font-size: 1.1em;
@@ -183,7 +174,6 @@ ul {
     margin-left: 5px;
 }
 
-/* Place Photos */
 .place-photo {
     width: 100%;
     height: auto;
@@ -205,7 +195,6 @@ a {
         color: var(--grey-3);
     }
 
-/* Containers */
 .container {
     background-color: var(--black-2);
     padding: 20px;

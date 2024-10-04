@@ -1,24 +1,21 @@
+using Microsoft.AspNetCore.Hosting.Server;
+using Microsoft.AspNetCore.Hosting.Server.Features;
+using Microsoft.AspNetCore.Server.Kestrel.Core;
 using WheresTheBeer.Components;
 
 var builder = WebApplication.CreateBuilder(args);
 
-// Load the apiKeys.json configuration
 builder.Configuration.AddJsonFile("apiKeys.json", optional: true, reloadOnChange: true);
 
-// Add services to the container.
 builder.Services.AddRazorComponents()
     .AddInteractiveServerComponents()
     .AddInteractiveWebAssemblyComponents();
 
-// Register HttpClient for both server and client-side rendering
 builder.Services.AddHttpClient();
-
-// Add support for controllers (for API routing)
 builder.Services.AddControllers();
 
 var app = builder.Build();
 
-// Configure the HTTP request pipeline.
 if (app.Environment.IsDevelopment())
 {
     app.UseWebAssemblyDebugging();
@@ -30,16 +27,36 @@ else
 }
 
 app.UseHttpsRedirection();
-
 app.UseStaticFiles();
 app.UseAntiforgery();
+
+app.Lifetime.ApplicationStarted.Register(() =>
+{
+    var serverAddresses = app.Services.GetService<IHostApplicationLifetime>()?.ApplicationStarted;
+    var server = app.Services.GetService<IServer>();
+
+    if (server is KestrelServer kestrelServer)
+    {
+        var addresses = kestrelServer.Features.Get<IServerAddressesFeature>()?.Addresses;
+
+        if (addresses != null)
+        {
+            foreach (var address in addresses)
+            {
+                Console.WriteLine($"Server is listening on: {address}");
+            }
+        }
+    }
+});
 
 app.MapRazorComponents<App>()
     .AddInteractiveServerRenderMode()
     .AddInteractiveWebAssemblyRenderMode()
     .AddAdditionalAssemblies(typeof(WheresTheBeer.Client._Imports).Assembly);
 
-// Map API controllers
 app.MapControllers();
 
+Console.WriteLine("Server has started and BaseAddress is ready.");
+
 app.Run();
+

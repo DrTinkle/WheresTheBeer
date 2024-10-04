@@ -2,14 +2,24 @@
 @using WheresTheBeer.Shared.Models
 @inject HttpClient Http
 @inject IJSRuntime JSRuntime
+@using System.Text.Json
+@using System.Globalization;
 
 <div class="container">
     <h3 class="header">Nearby Places (That Serve Beer!)</h3>
 
     <!-- Input fields for manual location and range slider -->
     <div class="input-group">
-        <input class="input" type="text" placeholder="@manualCoordinatesPlaceholder" @bind="manualCoordinates" />
-        <input class="input" type="text" placeholder="Enter your location (city or place name)" @bind="keyword" />
+        <div>
+            <p>Assumed location based on geolocation: @assumedLocation</p>
+            <input class="input" type="text" placeholder="@manualCoordinatesPlaceholder" @bind="manualCoordinates" />
+        </div>
+
+        <div>
+            <br>
+            <p>Place Keyword Search (if geolocation wrong or fails)</p>
+            <input class="input" type="text" placeholder="Enter your location (city or place name)" @bind="keyword" />
+        </div>
     </div>
 
     <div class="slider-group">
@@ -79,15 +89,16 @@
 
 @code {
     private List<GooglePlace> places;
-    private string message = "Waiting for server...";
+    private string message = "Ready for places seach.";
     private string manualCoordinates = string.Empty;
     private string keyword = string.Empty;
+    private string assumedLocation = "Fetching your location...";
     private string manualCoordinatesPlaceholder = "Fetching your location...";
     private int range = 500;  // Default search range (meters)
 
     protected override async Task OnInitializedAsync()
     {
-        await GetGeolocationAsync();  // Get user's geolocation on component initialization
+        await GetGeolocationAsync();  // Get user's geolocation on initialization
     }
 
     private async Task GetGeolocationAsync()
@@ -98,8 +109,11 @@
             var latitude = position.Latitude;
             var longitude = position.Longitude;
 
-            manualCoordinatesPlaceholder = $"{latitude},{longitude}";  // Set the geolocation as placeholder
-            manualCoordinates = $"{latitude},{longitude}";  // Set the coordinates as initial value
+            manualCoordinatesPlaceholder = $"{latitude},{longitude}";
+            manualCoordinates = $"{latitude},{longitude}";
+
+            // Call the reverse geocoding endpoint to get the city name
+            await GetCityFromCoordinates(latitude, longitude);
         }
         catch (Exception ex)
         {
@@ -159,7 +173,7 @@
 
     private async Task<string> GetPhotoUrl(string photoReference)
     {
-        // Call server-side controller to get the secure photo URL
+        // Call server-side controller to get photo URL
         var photoUrl = await Http.GetStringAsync($"api/googleplaces/photo?photoReference={photoReference}");
         return photoUrl;
     }
@@ -168,5 +182,65 @@
     {
         public double Latitude { get; set; }
         public double Longitude { get; set; }
+    }
+
+    private async Task GetCityFromCoordinates(double latitude, double longitude)
+    {
+        await EnsureBaseAddressIsSetAsync();
+
+        try
+        {
+            var apiUrl = $"api/googleplaces/reversegeocode?latitude={latitude}&longitude={longitude}";
+            Console.WriteLine($"Making API request to: {apiUrl}");
+            var cityResponse = await Http.GetStringAsync(apiUrl);
+            var cityJson = JsonDocument.Parse(cityResponse);
+            var addressComponents = cityJson.RootElement.GetProperty("results")[0].GetProperty("address_components").EnumerateArray();
+            string city = "";
+            string country = "";
+
+            foreach (var component in addressComponents)
+            {
+                var types = component.GetProperty("types").EnumerateArray();
+                foreach (var type in types)
+                {
+                    if (type.GetString() == "locality")
+                    {
+                        city = component.GetProperty("long_name").GetString();
+                    }
+                    if (type.GetString() == "country")
+                    {
+                        country = component.GetProperty("long_name").GetString();
+                    }
+                }
+            }
+
+            // Set the assumed location to city and country
+            assumedLocation = $"{city}, {country}";
+            Console.WriteLine($"Assumed Location: {assumedLocation}");
+        }
+        catch (Exception ex)
+        {
+            Console.WriteLine($"Error in GetCityFromCoordinates: {ex.Message}");
+        }
+    }
+
+    private async Task EnsureBaseAddressIsSetAsync()
+    {
+        int retries = 5;
+        while (Http.BaseAddress == null && retries > 0)
+        {
+            Console.WriteLine("BaseAddress is null, retrying...");
+            retries--;
+            await Task.Delay(1000);
+        }
+
+        if (Http.BaseAddress == null)
+        {
+            throw new InvalidOperationException("HttpClient BaseAddress is null.");
+        }
+        else
+        {
+            Console.WriteLine($"BaseAddress is set to: {Http.BaseAddress}");
+        }
     }
 }

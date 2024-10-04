@@ -13,38 +13,51 @@
     <!-- PWA Install Button -->
     <button id="installPWA" class="install-button" style="display: none;">Install</button>
 
-    <button class="button" @onclick="CallApi">Ping the Server</button>
-    <button class="button" @onclick="NavigateToPlaces">Find Nearby Places</button>
+    <button class="button" @onclick="NavigateToPlaces" disabled="@disableButtons">Find Nearby Places</button>
 </div>
 
 @code {
+    private string message = "Loading... (If this takes more than a few seconds, please refresh.)";
+    private bool disableButtons = true;
+
     protected override async Task OnAfterRenderAsync(bool firstRender)
     {
         if (firstRender)
         {
             await JSRuntime.InvokeVoidAsync("initializePWAInstall");
+            await CheckServerStatusAsync();
         }
     }
 
-    private string message = "Waiting for server...";
-
-    private async Task CallApi()
+    private async Task CheckServerStatusAsync()
     {
         try
         {
-            var baseUri = Http.BaseAddress ?? new Uri("https://fallback-url.com/");
-            var fullUri = new Uri(baseUri, "api/test/ping");
-            Console.WriteLine($"Making request to: {fullUri}");
+            var retries = 3;
+            var delay = 2000;
 
-            message = await Http.GetStringAsync(fullUri);
-        }
-        catch (HttpRequestException httpRequestEx)
-        {
-            message = $"HttpRequestException: {httpRequestEx.Message}";
+            for (int i = 0; i < retries; i++)
+            {
+                try
+                {
+                    var fullUri = new Uri(Http.BaseAddress, "api/test/ping");
+                    message = await Http.GetStringAsync(fullUri);
+                    Console.WriteLine($"Request succeeded: {fullUri}");
+                    disableButtons = false;
+                    message = "Ready for places search.";
+                    StateHasChanged(); // Force re-render
+                    return;
+                }
+                catch (HttpRequestException)
+                {
+                    Console.WriteLine("Ping failed, retrying...");
+                    await Task.Delay(delay);
+                }
+            }
         }
         catch (Exception ex)
         {
-            message = $"Exception: {ex.Message}";
+            message = $"Error: {ex.Message}";
         }
     }
 

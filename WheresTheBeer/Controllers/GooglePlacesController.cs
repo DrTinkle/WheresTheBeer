@@ -37,13 +37,12 @@ namespace WheresTheBeer.Controllers
                 return StatusCode((int)response.StatusCode, "Failed to retrieve data from Google Places.");
             }
 
-            // Get the raw JSON response
+            // Raw JSON response
             var rawContent = await response.Content.ReadAsStringAsync();
 
-            // Log the exact raw JSON response
-            Console.WriteLine($"Raw JSON Response: {rawContent}");
+            //Console.WriteLine($"Raw JSON Response: {rawContent}");
 
-            // (Optional) Deserialize the raw content for further processing, but AFTER logging the raw data
+            // Deserialize JSON
             var placesResponse = JsonSerializer.Deserialize<GooglePlacesResponse>(rawContent, new JsonSerializerOptions { PropertyNameCaseInsensitive = true });
 
             return Ok(placesResponse.Results);
@@ -57,7 +56,7 @@ namespace WheresTheBeer.Controllers
                 return BadRequest("Keyword is required.");
             }
 
-            // Step 1: Use the Geocoding API to get coordinates from the keyword
+            // Use the Geocoding API to get coordinates from the keyword
             var geocodeUrl = $"https://maps.googleapis.com/maps/api/geocode/json" +
                 $"?address={keyword}" +
                 $"&key={_apiKey}";
@@ -76,13 +75,13 @@ namespace WheresTheBeer.Controllers
                 return NotFound("No location found for the given keyword.");
             }
 
-            // Extract the coordinates from the geocoding response
+            // Extract the coordinates from geocoding
             var location = geocodeData.Results[0].Geometry.Location;
 
-            // Ensure the coordinates are formatted with periods using InvariantCulture
+            // Ensure the coordinates are formatted with periods
             var locationCoordinates = string.Format(CultureInfo.InvariantCulture, "{0},{1}", location.Lat, location.Lng);
 
-            // Step 2: Use the Nearby Search API with the derived coordinates
+            // Use the Nearby Search API with the derived coordinates
             var nearbySearchUrl = $"https://maps.googleapis.com/maps/api/place/nearbysearch/json" +
                 $"?location={locationCoordinates}" +
                 $"&radius={radius}" +
@@ -110,8 +109,25 @@ namespace WheresTheBeer.Controllers
             }
 
             var photoUrl = $"https://maps.googleapis.com/maps/api/place/photo?maxwidth=400&photoreference={photoReference}&key={_apiKey}";
-            return Ok(photoUrl);  // Return the constructed photo URL
+            return Ok(photoUrl);
         }
 
+
+        [HttpGet("reversegeocode")]
+        public async Task<IActionResult> GetCityFromCoordinates([FromQuery] double latitude, [FromQuery] double longitude)
+        {
+            var formLat = latitude.ToString(CultureInfo.InvariantCulture);
+            var formLong = longitude.ToString(CultureInfo.InvariantCulture);
+            var geocodeUrl = $"https://maps.googleapis.com/maps/api/geocode/json?latlng={formLat},{formLong}&key={_apiKey}";
+
+            var response = await _httpClient.GetAsync(geocodeUrl);
+            if (!response.IsSuccessStatusCode)
+            {
+                return StatusCode((int)response.StatusCode, "Failed to retrieve city from Google Geocoding.");
+            }
+
+            var content = await response.Content.ReadAsStringAsync();
+            return Ok(content);
+        }
     }
 }
