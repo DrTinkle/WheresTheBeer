@@ -1,4 +1,4 @@
-# WheresTheBeer
+# WheresTheBeer (Developement canceled)
 
 Test at https://wheresthebeer.azurewebsites.net/
 
